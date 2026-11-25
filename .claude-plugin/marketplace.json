@@ -1,0 +1,15 @@
+{
+  "name": "prompt-eval",
+  "owner": {
+    "name": "nesheep5"
+  },
+  "metadata": {
+    "description": "CLAUDE.md の修正前後を claude -p で走らせ比べ、狙った振る舞いの変化と退行の有無を判定する Claude Code プラグイン prompt-eval"
+  },
+  "plugins": [
+    {
+      "name": "prompt-eval",
+      "source": "./plugins/prompt-eval"
+    }
+  ]
+}

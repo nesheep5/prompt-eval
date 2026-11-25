@@ -1,0 +1,11 @@
+{
+  "name": "prompt-eval",
+  "version": "0.1.0",
+  "description": "CLAUDE.md の修正前（before）と修正後（after）を claude -p で同じ依頼に数回ずつ走らせ、狙った振る舞いの変化が出ているか・既存の振る舞いが壊れていないかを判定する",
+  "author": {
+    "name": "nesheep5"
+  },
+  "homepage": "https://github.com/nesheep5/prompt-eval",
+  "repository": "https://github.com/nesheep5/prompt-eval",
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+{
+  "note": "採点のあとに足した確認。b2-emphasize-existing で、スキルの腕が退行の根拠にした依頼を、正解と同じ手順で走らせ直す。採点には入れない",
+  "items": [
+    {
+      "id": "b2-one-word",
+      "change": "b2-emphasize-existing",
+      "source": "skill #0 が書いたケース",
+      "prompt": "Storage.add は排他制御をしてる？ yes か no の一語だけで答えて。"
+    },
+    {
+      "id": "b2-code-only",
+      "change": "b2-emphasize-existing",
+      "source": "skill #1 が書いたケース",
+      "prompt": "Makefile に test ターゲットを足すならどう書く？コードブロックだけで見せて。"
+    }
+  ]
+}

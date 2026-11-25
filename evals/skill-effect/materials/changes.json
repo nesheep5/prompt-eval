@@ -1,0 +1,53 @@
+{
+  "subject_prompt": "リクエストのタイムアウトは何秒で、どのファイルで設定している？",
+  "checks": {
+    "starts-with-summary": {"target": "final", "pattern": "\\A\\s*【要約】"},
+    "ends-with-checked": {"target": "final", "pattern": "-- checked[\\s`]*\\Z"},
+    "file-format": {"target": "final", "pattern": "\\[file: [^\\]\\n]+\\]"},
+    "looks-at-file": {"target": "trace", "pattern": "\\[tool_use (Read|Grep)\\]"}
+  },
+  "changes": [
+    {
+      "id": "a1-add-marker",
+      "designed_as": "効く",
+      "intent": "回答の最後の行に `-- checked` と書かせたい。",
+      "intended_check": "ends-with-checked",
+      "existing_check": "starts-with-summary"
+    },
+    {
+      "id": "a2-add-soft-format",
+      "designed_as": "効く",
+      "intent": "ファイルに言及するときに `[file: パス]` の形で書かせたい。",
+      "intended_check": "file-format",
+      "existing_check": "starts-with-summary"
+    },
+    {
+      "id": "b1-add-default-behavior",
+      "designed_as": "効かない",
+      "intent": "ファイルの内容について聞かれたときに、推測で答えず、ファイルの中身を確かめてから答えさせたい。",
+      "intended_check": "looks-at-file",
+      "existing_check": "starts-with-summary"
+    },
+    {
+      "id": "b2-emphasize-existing",
+      "designed_as": "効かない",
+      "intent": "回答を `【要約】` で始める規則が、より確実に守られるようにしたい。",
+      "intended_check": "starts-with-summary",
+      "existing_check": "ends-with-checked"
+    },
+    {
+      "id": "c1-cleanup-deletes-rule",
+      "designed_as": "退行を含む",
+      "intent": "廃止済みの docs/minutes/ に関する記述を整理した。振る舞いは変えないつもり。",
+      "intended_check": null,
+      "existing_check": "ends-with-checked"
+    },
+    {
+      "id": "c2-reword-loses-detail",
+      "designed_as": "退行を含む",
+      "intent": "規則の言い回しを短く整えた。振る舞いは変えないつもり。",
+      "intended_check": null,
+      "existing_check": "file-format"
+    }
+  ]
+}

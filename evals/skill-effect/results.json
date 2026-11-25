@@ -1,0 +1,624 @@
+{
+  "truth_runs": 8,
+  "arm_repeats": 2,
+  "truth": {
+    "a1-add-marker": {
+      "valid": {
+        "before": 8,
+        "after": 8
+      },
+      "models": [
+        "claude-fable-5-2"
+      ],
+      "intended": {
+        "check": "ends-with-checked",
+        "before": 0,
+        "after": 8,
+        "truth": "yes"
+      },
+      "regression": {
+        "check": "starts-with-summary",
+        "before": 8,
+        "after": 8,
+        "truth": "no"
+      }
+    },
+    "a2-add-soft-format": {
+      "valid": {
+        "before": 8,
+        "after": 8
+      },
+      "models": [
+        "claude-fable-5-2"
+      ],
+      "intended": {
+        "check": "file-format",
+        "before": 0,
+        "after": 8,
+        "truth": "yes"
+      },
+      "regression": {
+        "check": "starts-with-summary",
+        "before": 8,
+        "after": 8,
+        "truth": "no"
+      }
+    },
+    "b1-add-default-behavior": {
+      "valid": {
+        "before": 8,
+        "after": 8
+      },
+      "models": [
+        "claude-fable-5-2"
+      ],
+      "intended": {
+        "check": "looks-at-file",
+        "before": 8,
+        "after": 8,
+        "truth": "no"
+      },
+      "regression": {
+        "check": "starts-with-summary",
+        "before": 8,
+        "after": 8,
+        "truth": "no"
+      }
+    },
+    "b2-emphasize-existing": {
+      "valid": {
+        "before": 8,
+        "after": 8
+      },
+      "models": [
+        "claude-fable-5-2"
+      ],
+      "intended": {
+        "check": "starts-with-summary",
+        "before": 8,
+        "after": 8,
+        "truth": "no"
+      },
+      "regression": {
+        "check": "ends-with-checked",
+        "before": 8,
+        "after": 8,
+        "truth": "no"
+      }
+    },
+    "c1-cleanup-deletes-rule": {
+      "valid": {
+        "before": 8,
+        "after": 8
+      },
+      "models": [
+        "claude-fable-5-2"
+      ],
+      "regression": {
+        "check": "ends-with-checked",
+        "before": 8,
+        "after": 0,
+        "truth": "yes"
+      }
+    },
+    "c2-reword-loses-detail": {
+      "valid": {
+        "before": 8,
+        "after": 8
+      },
+      "models": [
+        "claude-fable-5-2"
+      ],
+      "regression": {
+        "check": "file-format",
+        "before": 8,
+        "after": 0,
+        "truth": "yes"
+      }
+    }
+  },
+  "summary": {
+    "reading": {
+      "sessions": 12,
+      "invalid": 0,
+      "changes_all_correct": 12,
+      "questions": 20,
+      "questions_correct": 20,
+      "seconds_total": 246,
+      "runner_subject_runs": 0
+    },
+    "skill": {
+      "sessions": 12,
+      "invalid": 0,
+      "changes_all_correct": 10,
+      "questions": 20,
+      "questions_correct": 18,
+      "seconds_total": 2521,
+      "runner_subject_runs": 395
+    }
+  },
+  "sessions": [
+    {
+      "arm": "reading",
+      "change": "a1-add-marker",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 22,
+      "turns": 4,
+      "cost_usd": 0.17250759999999998,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "a1-add-marker",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 20,
+      "turns": 5,
+      "cost_usd": 0.1779722,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "a2-add-soft-format",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 23,
+      "turns": 3,
+      "cost_usd": 0.16979899999999998,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "a2-add-soft-format",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 20,
+      "turns": 4,
+      "cost_usd": 0.17463299999999998,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "b1-add-default-behavior",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 25,
+      "turns": 9,
+      "cost_usd": 0.215102,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "b1-add-default-behavior",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 23,
+      "turns": 8,
+      "cost_usd": 0.21038020000000002,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "b2-emphasize-existing",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 21,
+      "turns": 3,
+      "cost_usd": 0.1776164,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "b2-emphasize-existing",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 24,
+      "turns": 3,
+      "cost_usd": 0.18398560000000003,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "no",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "c1-cleanup-deletes-rule",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 14,
+      "turns": 3,
+      "cost_usd": 0.1383216,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "c1-cleanup-deletes-rule",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 18,
+      "turns": 4,
+      "cost_usd": 0.16292979999999999,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "c2-reword-loses-detail",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 19,
+      "turns": 3,
+      "cost_usd": 0.15086259999999999,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "reading",
+      "change": "c2-reword-loses-detail",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 17,
+      "turns": 3,
+      "cost_usd": 0.1563504,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 0,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "a1-add-marker",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 138,
+      "turns": 6,
+      "cost_usd": 0.5070706,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 18,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "a1-add-marker",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 153,
+      "turns": 6,
+      "cost_usd": 0.5098622,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 15,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "a2-add-soft-format",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 135,
+      "turns": 6,
+      "cost_usd": 0.6114002,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 15,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "a2-add-soft-format",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 143,
+      "turns": 5,
+      "cost_usd": 0.5519350000000001,
+      "model": "claude-fable-5-2",
+      "intended_change": "yes",
+      "regression": "no",
+      "runner_subject_runs": 15,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "b1-add-default-behavior",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 148,
+      "turns": 6,
+      "cost_usd": 0.6395062,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "no",
+      "runner_subject_runs": 18,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "b1-add-default-behavior",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 188,
+      "turns": 5,
+      "cost_usd": 0.6482899999999999,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "no",
+      "runner_subject_runs": 24,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "b2-emphasize-existing",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 401,
+      "turns": 9,
+      "cost_usd": 0.7343300000000001,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "yes",
+      "runner_subject_runs": 74,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": false
+      },
+      "all_correct": false
+    },
+    {
+      "arm": "skill",
+      "change": "b2-emphasize-existing",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 658,
+      "turns": 11,
+      "cost_usd": 0.8688735999999999,
+      "model": "claude-fable-5-2",
+      "intended_change": "no",
+      "regression": "yes",
+      "runner_subject_runs": 168,
+      "valid": true,
+      "scored": {
+        "intended_change": true,
+        "regression": false
+      },
+      "all_correct": false
+    },
+    {
+      "arm": "skill",
+      "change": "c1-cleanup-deletes-rule",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 131,
+      "turns": 5,
+      "cost_usd": 0.48340700000000003,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 12,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "c1-cleanup-deletes-rule",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 158,
+      "turns": 6,
+      "cost_usd": 0.4965018,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 12,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "c2-reword-loses-detail",
+      "rep": 0,
+      "status": "ok",
+      "seconds": 120,
+      "turns": 5,
+      "cost_usd": 0.45222379999999995,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 9,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    },
+    {
+      "arm": "skill",
+      "change": "c2-reword-loses-detail",
+      "rep": 1,
+      "status": "ok",
+      "seconds": 148,
+      "turns": 5,
+      "cost_usd": 0.49260059999999994,
+      "model": "claude-fable-5-2",
+      "intended_change": "na",
+      "regression": "yes",
+      "runner_subject_runs": 15,
+      "valid": true,
+      "scored": {
+        "regression": true
+      },
+      "all_correct": true
+    }
+  ],
+  "followup": [
+    {
+      "id": "b2-one-word",
+      "change": "b2-emphasize-existing",
+      "source": "skill #0 が書いたケース",
+      "prompt": "Storage.add は排他制御をしてる？ yes か no の一語だけで答えて。",
+      "checks": {
+        "starts-with-summary": {
+          "before": "1/8",
+          "after": "3/8"
+        },
+        "ends-with-checked": {
+          "before": "1/8",
+          "after": "3/8"
+        }
+      }
+    },
+    {
+      "id": "b2-code-only",
+      "change": "b2-emphasize-existing",
+      "source": "skill #1 が書いたケース",
+      "prompt": "Makefile に test ターゲットを足すならどう書く？コードブロックだけで見せて。",
+      "checks": {
+        "starts-with-summary": {
+          "before": "6/8",
+          "after": "1/8"
+        },
+        "ends-with-checked": {
+          "before": "6/8",
+          "after": "1/8"
+        }
+      }
+    }
+  ]
+}
